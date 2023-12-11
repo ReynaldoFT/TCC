@@ -1,0 +1,15 @@
+
+#include <Thermistor.h> // BIBLIOTECA
+ 
+Thermistor temp(2); //Variável Thermistor, indicando o pino análogo (2) que esta conectado
+void setup() {
+  Serial.begin(9600); //Inicia o serial
+  delay(1000); //Delay de 1 segundo
+}
+void loop() {
+  int temperature = temp.getTemp(); //temperature recebe o valor calculdado da biblioteca
+  Serial.print("Temperatura: "); //Adiciona o texto na tela
+  Serial.print(temperature); //Adiciona a temperatura na tela
+  Serial.println("*C"); //Adiciona "*C" na tela
+  delay(1000); //Delay de 1 segundo
+}

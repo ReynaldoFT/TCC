@@ -1,0 +1,10 @@
+create schema `bd_tcc` ;
+
+use bd_tcc;
+
+create table `bd_tcc`.`tb_dados` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `dia` DATETIME NULL,
+  `temperatura` DOUBLE NULL,
+  `ph` DOUBLE NULL,
+  PRIMARY KEY (`id`));
